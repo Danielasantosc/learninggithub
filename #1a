@@ -1,0 +1,21 @@
+include "$CODE/pathnames"
+adopath ++ "$CODE/ado"
+
+
+encode cell, gen(cell_num)
+
+levelsof facility_num //there are 28 facilities
+
+
+levelsof facility_num, local(facilities) 
+
+foreach j of local facilities {
+levelsof cell_num if facility_num==`j'
+}
+ 
+ 
+tab 
+bys facility_num: tab cell_num
+
+
+tabulate rep78 foreign, row
