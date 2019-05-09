@@ -15,7 +15,7 @@ levelsof cell_num if facility_num==`j'
  
  
 tab 
-bys facility_num: tab cell_num
+bys facility_num: tab cell_num //tab cells in each prision
 
 
 tabulate rep78 foreign, row
